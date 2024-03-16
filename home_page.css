@@ -138,7 +138,7 @@ body{
   margin: 15px;
   border: #000000 solid;
   border-radius: 15px;
-  background-color: #62aeae;
+  background-color: rgb(25, 197, 197);
   animation-name: opac;
   animation-duration: 1.5s;
 }
@@ -153,18 +153,19 @@ body{
   margin-top: 6px;
   margin-left: 6px;
   font-size:35px;
+  font-family:sans-serif;
 }
 .subject_detail{
   margin-top:4px;
   margin-left: 50px;
   font-size: 20px;
+  font-family:sans-serif;
 }
 a:visited{
   color: #000000;
   text-decoration: none;
 
 }
-
 
 @keyframes slide_up {
   from{
