@@ -1,69 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>School System</title>
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
-        <link rel="stylesheet" type="text/css" href="home_page.css">
-    </head>
-    <body>
-        <div class="topBar">
-            <div class="leftTopbar">
-                <a href="homepage.html" class="text-dark home_link">School System</a>
-            </div>
-            <div class="rightTopbar">
-                <button class="TopDropbtn"><i class="text-dark profile bi-person-circle"></i></button>
-                <div class="Topdropdown-content">
-                    <a href="#" class="text-dark ">View my Details</a>
-                    <a  href="login.html">Log Out</a>
-                </div>
+<head>
+    <title>School System</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" type="text/css" href="home_page.css">
+    <script src="home_page.js"></script>
+</head>
+<body>
+    <div class="topBar">
+        <div class="leftTopbar">
+            <a href="homepage.html" class="text-dark home_link">School System</a>
+        </div>
+        <div class="rightTopbar">
+            <button class="TopDropbtn"><i class="text-dark profile bi-person-circle"></i></button>
+            <div class="Topdropdown-content">
+                <a href="#" class="text-dark ">View my Details</a>
+                <a  href="login.html">Log Out</a>
             </div>
         </div>
+    </div>
     <!---------------------------------------------------------------------------------------------------------------->
     <div id="side_bar"  class="sidebar" onmouseover="Sidebar()" onmouseout="Sidebar()">
         <div class="side_bar_menu"><a href="#" class="side_bar_link"><div class="side_bar_menu_text"><i class="bi bi-clipboard-check sidenav_icons"></i><span  id="icon-text" class="icon-text">Assignments</span></a><br></div></div>
-        <div class="side_bar_menu"><a href="#" class="side_bar_link"><div class="side_bar_menu_text"><i class="bi bi-calendar-event sidenav_icons"></i><span  id="icon-text1" class="icon-text">Calender</span></a><br></div></div>
+        <div class="side_bar_menu"><a href="#" class="side_bar_link"><div class="side_bar_menu_text"><i class="bi bi-calendar-event sidenav_icons"></i><span  id="icon-text1" class="icon-text">Calendar</span></a><br></div></div>
         <div class="side_bar_menu"><a href="#" class="side_bar_link"><div class="side_bar_menu_text"><i class="bi bi-check-lg sidenav_icons"></i><span  id="icon-text2" class="icon-text">Attendance</span></a><br></div></div>
-      </div>
+    </div>
     <!------------------------------------------------------------------------------------------------------------------>
     <div class="classes">
         <div class="first_class class">
             <a class="first_class_link class_link" href="#">
                 <div class="first_card-body">
-                    <div class="subject_code">Subject-1</div>
-                    <div class="subject_detail">Subject-1</div><br>
+                    <div class="subject_code">Subject-1
+                        <button onclick="showLoginPrompt()">Mark My Attendance</button>
+
+                            <!-- Here are the appendet changes for attendance -->
+                            <div id="loginForm" style="display: none;">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" name="username"><br><br>
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password"><br><br>
+                                <button onclick="login()">Submit</button>
+                            </div>
+
+                            <script src="homepage.js"></script>
+                            <button class="attendance_button" onclick="showAttendance()">Show My Attendance</button>
+                    </div>
+                    <div class="subject_detail">Subject-1</div>
                     <div class="proff">teacherA</div>
-                  </div>
-            </a>
-        </div>
-        <div class="seconnd_class class">
-            <a class="seconnd_class_link class_link" href="#">
-                <div class="second_card-body">
-                    <div class="subject_code">Subject-2</div>
-                    <div class="subject_detail">Subject-2 </div><br>
-                    <div class="proff">teacherb</div>
+                    
+                        
+                        
+                    
                 </div>
             </a>
         </div>
-        <div class="first_class class">
-            <a class="first_class_link class_link" href="#">
-                <div class="first_card-body">
-                    <div class="subject_code">Subject-1</div>
-                    <div class="subject_detail">Subject-1</div><br>
-                    <div class="proff">teacherA</div>
-                  </div>
+        <div class="second_class class">
+            <a class="second_class_link class_link" href="#">
+                <div class="second_card-body">
+                    <div class="subject_code">Subject-2
+                        <button onclick="showLoginPrompt()">Mark My Attendance2</button>
+
+                            <!-- Here are the append changes for attendance -->
+                            <div id="loginForm" style="display: none;">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" name="username"><br><br>
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password"><br><br>
+                                <button onclick="login()">Submit</button>
+                            </div>
+
+                            <script src="homepage.js"></script>
+                            <button class="attendance_button" onclick="showAttendance()">Show My Attendance</button>
+                    </div>
+                    <div class="subject_detail">Subject-2</div>
+                    <div class="proff">teacherB</div>
+                    
+                        
+                        
+                    
+                </div>
             </a>
         </div>
-        <div class="seconnd_class class">
-            <a class="seconnd_class_link class_link" href="#">
-                <div class="second_card-body">
-                    <div class="subject_code">Subject-2</div>
-                    <div class="subject_detail">Subject-2 </div><br>
-                    <div class="proff">teacherb</div>
+        <div class="third_class class">
+            <a class="third_class_link class_link" href="#">
+                <div class="third_card-body">
+                    <div class="subject_code">Subject-3
+                        <button onclick="showLoginPrompt()">Mark My Attendance3</button>
+
+                            <!-- Here are the appendet changes for attendance -->
+                            <div id="loginForm" style="display: none;">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" name="username"><br><br>
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password"><br><br>
+                                <button onclick="login()">Submit</button>
+                            </div>
+
+                            <script src="homepage.js"></script>
+                            <button class="attendance_button" onclick="showAttendance()">Show My Attendance</button>
+                    </div>
+                    <div class="subject_detail">Subject-3</div>
+                    <div class="proff">teacherC</div>
+                    
+                        
+                        
+                    
+                </div>
+            </a>
+        </div>
+        <div class="fourth_class class">
+            <a class="fourth_class_link class_link" href="#">
+                <div class="fourth_card-body">
+                    <div class="subject_code">Subject-4
+                        <button onclick="showLoginPrompt()">Mark My Attendance4</button>
+
+                            <!-- Here are the appended changes for attendance -->
+                            <div id="loginForm" style="display: none;">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" name="username"><br><br>
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password"><br><br>
+                                <button onclick="login()">Submit</button>
+                            </div>
+
+                            <script src="homepage.js"></script>
+                        <button class="attendance_button" onclick="showAttendance()">Show My Attendance</button>
+                    </div>
+                    <div class="subject_detail">Subject-4</div>
+                    <div class="proff">teacherD</div>
+                    
+                        
+                        
+                    
                 </div>
             </a>
         </div>
     </div>
-    </body>
-    <script src="home_page.js"></script>
+
+    <!-- Attendance Modal -->
+   
+
+    
+</body>
 </html>
